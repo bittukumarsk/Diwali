@@ -1,0 +1,175 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section
+{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#ffef5c, #e91e63);
+}
+section .diya
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: -175px;
+    background-image: url('../images/happy.png');
+    background-position: center;
+    background-size: 22%;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+section .text
+{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+section .text h2
+{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    font-size: 150px;
+    font-weight: 700;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    font-family: 'Tangerine', cursive;
+}
+section .text span
+{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+    font-weight: 500;
+    font-size: 25px;
+}
+section .image
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url('../images/temple.png');
+    background-repeat: repeat-x;
+    background-size: 300px;
+    pointer-events: none;
+    animation: scrollImage 20s linear infinite;
+    z-index: 3;
+}
+@keyframes scrollImage
+{
+    0%
+    {
+        background-position: 1200px;
+    }
+    100%
+    {
+        background-position: 0px;
+    }
+}
+section .image-reverse
+{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 575px;
+    background: url('../images/ramji.png');
+    background-repeat: repeat-x;
+    background-size: 575px;
+    pointer-events: none;
+    opacity: 0.2;
+    animation: scrollImageReverse 30s linear infinite;
+}
+@keyframes scrollImageReverse
+{
+    0%
+    {
+        background-position: 0px;
+    }
+    100%
+    {
+        background-position: 1600px;
+    }
+}
+.particles-js-canvas-el
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+}
+
+/* Media Query */
+@media (max-width:1150px)
+{
+    section .diya
+    {
+        background-size: 30%;
+    }
+    section .text h2
+    {
+        margin-top: 20px;
+        font-size: 130px;
+    }
+    section .text span
+    {
+        margin-top: 175px;
+        font-size: 20px;
+    }
+}
+@media (max-width:900px)
+{
+    section .diya
+    {
+        background-size: 40%;
+    }
+    section .text h2
+    {
+        font-size: 120px;
+    }
+}
+@media (max-width:560px)
+{
+    section .diya
+    {
+        background-size: 50%;
+    }
+    section .text h2
+    {
+        font-size: 90px;
+    }
+    section .text span
+    {
+        margin-top: 150px;
+        font-size: 18px;
+    }
+}
